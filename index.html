@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	.letra{
+			position: absolute;
+			font-family: titulop1;
+			font-size: 600%;
+			top: 80%;
+			left: 25%;
+			-webkit-text-stroke: 2px black;
+			color: #9DCAE0;
+		}
+	body{
+		background-image: url("fondo.jpg");
+	}
+	.cuadrop{
+		position: absolute;
+		top: 50px;
+		left: 70px;
+		width: 1200px;
+		height: 550px;
+		background: white;
+	}
+
+	.cuadrom{
+		position: absolute;
+		top: 50px;
+		left: 70px;
+		width: 100px;
+		height: 100px;
+		background: black;
+		border-style: double;
+		border-color: #F300FF;
+		border-size: 25px;
+		animation-name: input;
+		animation-iteration-count: infinite;
+		animation-duration: 5s; 
+	}
+
+	@keyframes input{
+	0%{ border-color: #FD1532; }
+	16%{ border-color: #FAED27; }
+	32%{ border-color: #55FF00; }
+	48%{ border-color: #00FFC5; }
+	64%{ border-color: #0036FF; }
+	80%{ border-color: #4D00FF; }
+	96%{ border-color: #F300FF; }
+}
+
+@font-face{
+	font-family: titulop1;
+	src: url(titulo1.otf);
+}
+	</style>
+</head>
+<body>
+	<div class="cuadrop"></div>
+	<div class="cuadrom" id="mo" onclick="mover()"></div>
+	<audio src="soo.mp3"  id="sonii"></audio>
+	<div class="letra">Toca el cuadro!</div>
+	<script >
+		function mover(){
+		 sonii.play();
+		 l= Math.floor((Math.random() * (1151-70))+70);
+		 t= Math.floor((Math.random() * (501-50))+50);
+		 mo.style.left=l+"px";
+		 mo.style.top=t+"px";
+		}
+
+
+
+	</script>
+
+</body>
+</html>
